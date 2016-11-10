@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ContentType } from './content-type/content-type'
+import { ContentTypeComponent } from './content-type/content-type.component'
 
 @Component({
   selector: 'app-dashboard',
@@ -7,7 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DashboardComponent implements OnInit {
 
-  constructor() { }
+  contentTypes: ContentType[] = [
+    {title: "documents", icon: "fa-file-text-o"},
+    {title: "videos", icon: "fa-film"},
+    {title: "music", icon: "fa-music"},
+    {title: "pictures", icon: "fa-camera"}
+  ];
+
+  constructor() {
+   }
 
   ngOnInit() {
   }

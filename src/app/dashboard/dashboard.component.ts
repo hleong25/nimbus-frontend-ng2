@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ContentType } from './content-type/content-type'
-import { ContentTypeComponent } from './content-type/content-type.component'
+import { ContentType } from './content-type/content-type';
 
 @Component({
   selector: 'app-dashboard',
@@ -10,10 +9,10 @@ import { ContentTypeComponent } from './content-type/content-type.component'
 export class DashboardComponent implements OnInit {
 
   contentTypes: ContentType[] = [
-    {title: "documents", icon: "fa-file-text-o"},
-    {title: "videos", icon: "fa-film"},
-    {title: "music", icon: "fa-music"},
-    {title: "pictures", icon: "fa-camera"}
+    {title: 'documents', icon: 'fa-file-text-o'},
+    {title: 'videos', icon: 'fa-film'},
+    {title: 'music', icon: 'fa-music'},
+    {title: 'pictures', icon: 'fa-camera'}
   ];
 
   constructor() {

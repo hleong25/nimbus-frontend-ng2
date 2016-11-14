@@ -11,6 +11,8 @@ import { ContentTypeComponent } from './dashboard/content-type/content-type.comp
   declarations: [
     AppComponent,
     DashboardComponent,
+  ],
+  exports: [
     ContentTypeComponent,
   ],
   imports: [

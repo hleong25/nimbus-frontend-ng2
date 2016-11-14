@@ -9,7 +9,10 @@ import { ContentType } from './content-type';
 export class ContentTypeComponent implements OnInit {
 
   @Input()
-  contentType: ContentType;
+  contentType: ContentType = {
+    title: '',
+    icon: '',
+  };
 
   constructor() {
   }

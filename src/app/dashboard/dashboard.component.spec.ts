@@ -4,6 +4,7 @@ import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
 import { DashboardComponent } from './dashboard.component';
+import { ContentTypeComponent } from './content-type/content-type.component';
 
 describe('DashboardComponent', () => {
   let component: DashboardComponent;
@@ -11,7 +12,10 @@ describe('DashboardComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ DashboardComponent ]
+      declarations: [
+        DashboardComponent,
+        ContentTypeComponent,
+      ]
     })
     .compileComponents();
   }));

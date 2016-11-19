@@ -20,7 +20,9 @@ export class DashboardComponent implements OnInit {
     this
       .contentTypeService
       .getContentTypes()
-      .then(types => this.contentTypes = types);
+      .then(types => {
+        this.contentTypes = types;
+      });
   }
 
 }

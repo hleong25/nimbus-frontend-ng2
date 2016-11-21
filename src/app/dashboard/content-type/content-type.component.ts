@@ -4,7 +4,7 @@ import { ContentType } from './content-type';
 @Component({
   selector: 'app-content-type',
   templateUrl: './content-type.component.html',
-  styleUrls: ['./content-type.component.css']
+  styleUrls: ['./content-type.component.scss']
 })
 export class ContentTypeComponent implements OnInit {
 

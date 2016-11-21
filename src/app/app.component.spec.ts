@@ -24,23 +24,23 @@ describe('App: NimbusFrontendNg2', () => {
     expect(app).toBeTruthy();
   }));
 
-  it(`should have as title 'Nimbus'`, async(() => {
+  it(`should have as title 'nimbus'`, async(() => {
     let fixture = TestBed.createComponent(AppComponent);
     let app = fixture.debugElement.componentInstance;
-    expect(app.title).toEqual('Nimbus');
+    expect(app.title).toEqual('nimbus');
   }));
 
   it('should render title in a h1 tag', async(() => {
     let fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     let compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('h1').textContent).toContain('Nimbus');
+    expect(compiled.querySelector('h1').textContent).toContain('nimbus');
   }));
 
   it('should render description in a h3 tag', async(() => {
     let fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     let compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('h3').textContent).toContain('Cloud Storage Manager');
+    expect(compiled.querySelector('h3').textContent).toContain('cloud storage manager');
   }));
 });

@@ -6,6 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'Nimbus';
-  description = 'Cloud Storage Manager';
+  title = 'nimbus';
+  description = '{cloud storage manager}';
 }

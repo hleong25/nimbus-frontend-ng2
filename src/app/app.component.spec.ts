@@ -4,6 +4,7 @@ import { TestBed, async } from '@angular/core/testing';
 import { AppComponent } from './app.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ContentTypeComponent } from './dashboard/content-type/content-type.component';
+import { SearchBoxComponent } from './search-box/search-box.component';
 
 describe('App: NimbusFrontendNg2', () => {
   beforeEach(() => {
@@ -12,6 +13,7 @@ describe('App: NimbusFrontendNg2', () => {
         AppComponent,
         DashboardComponent,
         ContentTypeComponent,
+        SearchBoxComponent,
       ],
     });
   });
@@ -22,16 +24,23 @@ describe('App: NimbusFrontendNg2', () => {
     expect(app).toBeTruthy();
   }));
 
-  it(`should have as title 'Nimbus Cloud Storage Manager'`, async(() => {
+  it(`should have as title 'Nimbus'`, async(() => {
     let fixture = TestBed.createComponent(AppComponent);
     let app = fixture.debugElement.componentInstance;
-    expect(app.title).toEqual('Nimbus Cloud Storage Manager');
+    expect(app.title).toEqual('Nimbus');
   }));
 
   it('should render title in a h1 tag', async(() => {
     let fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     let compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('h1').textContent).toContain('Nimbus Cloud Storage Manager');
+    expect(compiled.querySelector('h1').textContent).toContain('Nimbus');
+  }));
+
+  it('should render description in a h3 tag', async(() => {
+    let fixture = TestBed.createComponent(AppComponent);
+    fixture.detectChanges();
+    let compiled = fixture.debugElement.nativeElement;
+    expect(compiled.querySelector('h3').textContent).toContain('Cloud Storage Manager');
   }));
 });

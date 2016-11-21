@@ -6,7 +6,7 @@ import { ContentTypeService } from './content-type/content-type.service';
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
-  styleUrls: ['./dashboard.component.css'],
+  styleUrls: ['./dashboard.component.scss'],
   providers: [ ContentTypeService ]
 })
 export class DashboardComponent implements OnInit {

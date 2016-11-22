@@ -1,15 +1,39 @@
 button {
-    min-width: 9em;
-    margin: 0 0.5em 0.5em 0;
+    margin: 0.25em;
 }
 
 .fa {
-    font-size: 6em;
+    font-size: 2em;
 }
 
 p {
-    font-size: 1.25em;
-    /*font-weight: bold;*/
+    font-size: 1em;
     margin-bottom: 0;
     margin-top: 0.25em;
 }
+
+@media (min-width: 576px) {
+    .fa {
+        font-size: 4em;
+    }
+}
+
+@media (min-width: 768px) {
+    .fa {
+        font-size: 6em;
+    }
+
+    p {
+        font-size: 1.25em;
+    }
+}
+
+/*@media (min-width: 992px) {
+  .fa {
+  }
+}*/
+
+/*@media (min-width: 1200px) {
+  .fa {
+  }
+}*/

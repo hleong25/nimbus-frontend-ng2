@@ -1,5 +1,5 @@
-<div id="content-types">
-    <app-content-type *ngFor="let contentType of contentTypes"
-        [contentType]="contentType">
-    </app-content-type>
+<div id="content-types" class="row">
+    <div class="col-xs-3 col-md-3 content-type" *ngFor="let contentType of contentTypes">
+        <app-content-type [contentType]="contentType"></app-content-type>
+    </div>
 </div>

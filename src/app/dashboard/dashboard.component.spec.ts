@@ -5,7 +5,7 @@ import { DebugElement } from '@angular/core';
 
 import { DashboardComponent } from './dashboard.component';
 import { ContentTypeComponent } from './content-type/content-type.component';
-import { ContentTypeService } from './content-type/content-type.service';
+import { ContentTypeService } from '../_services/content-type.service';
 
 describe('DashboardComponent', () => {
   let component: DashboardComponent;

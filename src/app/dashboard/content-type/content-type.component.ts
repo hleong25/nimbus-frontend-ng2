@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { ContentType } from './content-type';
+import { ContentType } from '../../_models/content-type';
 
 @Component({
   selector: 'app-content-type',

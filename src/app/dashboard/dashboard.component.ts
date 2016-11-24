@@ -4,7 +4,7 @@ import { ContentType } from '../_models/content-type';
 import { ContentTypeService } from '../_services/content-type.service';
 
 @Component({
-  selector: 'app-dashboard',
+  selector: 'dashboard',
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.scss'],
   providers: [ ContentTypeService ]

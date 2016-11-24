@@ -2,7 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { ContentType } from '../../_models/content-type';
 
 @Component({
-  selector: 'app-content-type',
+  selector: 'content-type',
   templateUrl: './content-type.component.html',
   styleUrls: ['./content-type.component.scss']
 })

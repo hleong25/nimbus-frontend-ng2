@@ -4,9 +4,10 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
-import { ContentTypeComponent } from './dashboard/content-type/content-type.component';
-import { SearchBoxComponent } from './dashboard/search-box/search-box.component';
+import {
+  DashboardComponent,
+  ContentTypeComponent,
+  SearchBoxComponent } from './dashboard/dashboard';
 
 @NgModule({
   declarations: [

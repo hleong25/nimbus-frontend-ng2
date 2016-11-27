@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 
-import { ContentType } from '../_models/content-type';
-import { CONTENT_TYPES } from './mock-content-types';
+import { ContentType } from '../content-type';
+import { CONTENT_TYPES } from '../content-type';
 
 @Injectable()
 export class ContentTypeService {

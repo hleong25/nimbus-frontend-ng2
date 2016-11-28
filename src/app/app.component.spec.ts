@@ -1,21 +1,32 @@
 /* tslint:disable:no-unused-variable */
 
 import { TestBed, async } from '@angular/core/testing';
+import { APP_BASE_HREF } from '@angular/common';
+
 import { AppComponent } from './app.component';
+import { AppRoutingModule } from './app-routing.module';
+
 import {
   DashboardComponent,
   ContentTypeComponent,
-  SearchBoxComponent } from './dashboard/dashboard';
+  SearchBoxComponent
+} from './dashboard/dashboard';
 
 describe('App: NimbusFrontendNg2', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
+      imports: [
+        AppRoutingModule,
+      ],
       declarations: [
         AppComponent,
         DashboardComponent,
         ContentTypeComponent,
         SearchBoxComponent,
       ],
+      providers: [
+        { provide: APP_BASE_HREF, useValue: '/' }
+      ]
     });
   });
 

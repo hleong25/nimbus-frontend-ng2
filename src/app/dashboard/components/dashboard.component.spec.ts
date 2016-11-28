@@ -5,6 +5,7 @@ import { DebugElement } from '@angular/core';
 
 import { DashboardComponent } from './dashboard.component';
 import { ContentTypeComponent, ContentTypeService } from '../content-type/content-type';
+import { SearchBoxComponent } from '../search-box/search-box'
 
 describe('DashboardComponent', () => {
   let component: DashboardComponent;
@@ -15,6 +16,7 @@ describe('DashboardComponent', () => {
       declarations: [
         DashboardComponent,
         ContentTypeComponent,
+        SearchBoxComponent,
       ]
     })
     .compileComponents();

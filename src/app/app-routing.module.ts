@@ -1,8 +1,8 @@
 import { NgModule }             from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { HomeComponent } from './home/home.shared';
-import { DashboardComponent } from './dashboard/dashboard.shared';
+import { HomeComponent } from './home/home.exports';
+import { DashboardComponent } from './dashboard/dashboard.exports';
 
 export const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },

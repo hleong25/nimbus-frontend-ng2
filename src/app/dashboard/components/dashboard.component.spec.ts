@@ -4,8 +4,8 @@ import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
 import { DashboardComponent } from './dashboard.component';
-import { ContentTypeComponent, ContentTypeService } from '../content-type/content-type';
-import { SearchBoxComponent } from '../search-box/search-box'
+import { ContentTypeComponent, ContentTypeService } from '../content-type/content-type.shared';
+import { SearchBoxComponent } from '../search-box/search-box.shared'
 
 describe('DashboardComponent', () => {
   let component: DashboardComponent;

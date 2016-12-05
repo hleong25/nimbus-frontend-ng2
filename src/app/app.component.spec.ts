@@ -6,23 +6,19 @@ import { APP_BASE_HREF } from '@angular/common';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 
-import {
-  DashboardComponent,
-  ContentTypeComponent,
-  SearchBoxComponent
-} from './dashboard/dashboard';
+import { HomeModule } from './home/home.module';
+import { DashboardModule } from './dashboard/dashboard.module';
 
 describe('App: NimbusFrontendNg2', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       imports: [
         AppRoutingModule,
+        HomeModule,
+        DashboardModule,
       ],
       declarations: [
         AppComponent,
-        DashboardComponent,
-        ContentTypeComponent,
-        SearchBoxComponent,
       ],
       providers: [
         { provide: APP_BASE_HREF, useValue: '/' }

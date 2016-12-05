@@ -8,11 +8,15 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { CoreModule } from './core/core.module';
 import { HomeModule } from './home/home.module';
+import { DashboardModule } from './dashboard/dashboard.module';
+import { SearchBoxModule } from './dashboard/search-box/search-box.module';
 
 @NgModule({
   imports: [
     BrowserModule,
     HomeModule,
+    DashboardModule,
+    //SearchBoxModule,
 
     CoreModule,
     AppRoutingModule

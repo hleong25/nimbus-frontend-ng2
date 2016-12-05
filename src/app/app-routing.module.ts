@@ -13,10 +13,17 @@ import {
 } from './home/home.module';
   */
 
+import { HomeComponent } from './home/components/home.component';
+import { DashboardComponent } from './dashboard/components/dashboard.component';
+
 export const routes: Routes = [
-  { path: '', redirectTo: '/home', pathMatch: 'full' },
-  //{ path: 'dashboard', component: DashboardComponent },
-  { path: 'home', loadChildren: 'app/home/home.module#HomeModule' },
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: 'home', component: HomeComponent },
+  { path: 'dashboard', component: DashboardComponent },
+
+
+  //{ path: 'dashboard', loadChildren: 'app/dashboard/dashboard.module#DashboardModule' },
+  //{ path: 'dashboard', loadChildren: 'app/dashboard/search-box/search-box.module#SearchBoxModule' },
 ];
 
 @NgModule({

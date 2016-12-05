@@ -1,6 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 
-import { ContentType, ContentTypeService } from '../content-type/content-type';
+import {
+  ContentType,
+  ContentTypeService,
+  ContentTypeModule,
+} from '../content-type/content-type.module';
 
 @Component({
   selector: 'dashboard',

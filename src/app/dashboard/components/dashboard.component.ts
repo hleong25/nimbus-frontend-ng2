@@ -3,8 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import {
   ContentType,
   ContentTypeService,
-  ContentTypeModule,
-} from '../content-type/content-type.module';
+} from '../content-type/content-type.shared';
 
 @Component({
   selector: 'dashboard',

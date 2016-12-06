@@ -1,17 +1,19 @@
 <div id="login" class="col-md-8 offset-md-2">
-  <form>
+  <form (ngSubmit)="loginForm.form.valid && login()" #loginForm="ngForm">
 
     <div class="form-group row">
       <label for="inputEmail" class="col-md-2 col-form-label">email</label>
       <div class="col-md-10">
-        <input type="email" class="form-control" id="inputEmail" placeholder="email">
+        <input type="email" class="form-control" id="inputEmail" placeholder="email"
+          name="email" [(ngModel)]="loginInfo.email" #email="ngModel" required >
       </div>
     </div>
 
     <div class="form-group row">
       <label for="inputPassword" class="col-md-2 col-form-label">password</label>
       <div class="col-md-10">
-        <input type="password" class="form-control" id="inputPassword" placeholder="password">
+        <input type="password" class="form-control" id="inputPassword" placeholder="password"
+          name="password" [(ngModel)]="loginInfo.password" #password="ngModel" required >
         <div class="text-md-right">
           <span>forgot password?</span>
         </div>
@@ -20,7 +22,7 @@
 
     <div class="form-group row">
       <div class="col-md-12">
-        <button type="submit" class="w-100 btn btn-primary">sign in</button>
+        <button type="submit" class="btn btn-primary w-100">sign in</button>
       </div>
     </div>
 
@@ -29,6 +31,10 @@
           <span class="text-muted">no account?</span>
           <a routerLink="/user/register" rouerLinkActive="active">register</a>
       </div>
+    </div>
+
+    <div [hidden]="!errmsg" class="text-danger text-md-center">
+      {{errmsg}}
     </div>
 
   </form>

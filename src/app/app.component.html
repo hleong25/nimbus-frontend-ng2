@@ -12,7 +12,7 @@
     </div>
 </header>
 <div id="main" class="container">
-    <nav>
+    <nav *ngIf="router.url !== '/user/login'">
         <a routerLink="/home" rouerLinkActive="active">Home</a>
         <a routerLink="/dashboard" rouerLinkActive="active">Dashboard</a>
     </nav>

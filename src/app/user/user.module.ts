@@ -7,6 +7,8 @@ import { UserComponent } from './components/user/user.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 
+import { User } from './models/user';
+
 @NgModule({
   imports: [
     SharedModule,
@@ -21,6 +23,12 @@ import { RegisterComponent } from './components/register/register.component';
 
   exports: [
     UserComponent,
+    LoginComponent,
+    RegisterComponent,
+  ],
+
+  providers: [
+    User,
   ]
 })
 export class UserModule { }

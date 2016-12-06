@@ -5,14 +5,13 @@ import {
 } from '@angular/router';
 
 import { UserComponent } from './components/user/user.component';
+import { LoginComponent } from './components/login/login.component';
+import { RegisterComponent } from './components/register/register.component';
 
 const routes : Routes = [
-    {
-        path: '', component: UserComponent,
-        children: [
-            // empty
-        ]
-    }
+    { path: 'user', component: UserComponent, },
+    { path: 'user/login', component: LoginComponent, },
+    { path: 'user/register', component: RegisterComponent, },
 ];
 
 @NgModule({

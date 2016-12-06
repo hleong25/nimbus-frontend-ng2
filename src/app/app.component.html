@@ -1,15 +1,20 @@
 <header class="bg-faded">
     <div class="container">
-        <h1>{{title}}</h1>
-        <h3>{{description}}</h3>
-
-        <app-user>Loading user...</app-user>
+        <div class="row">
+            <div class="col-md-8">
+                <h1>{{title}}</h1>
+                <h3>{{description}}</h3>
+            </div>
+            <div class="col-md-4 text-md-right">
+                <user>Loading app-user...</user>
+            </div>
+        </div>
     </div>
 </header>
 <div id="main" class="container">
     <nav>
-        <a routerLink="home" rouerLinkActive="active">Home</a>
-        <a routerLink="dashboard" rouerLinkActive="active">Dashboard</a>
+        <a routerLink="/home" rouerLinkActive="active">Home</a>
+        <a routerLink="/dashboard" rouerLinkActive="active">Dashboard</a>
     </nav>
     <router-outlet></router-outlet>
 </div>

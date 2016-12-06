@@ -1,3 +1,35 @@
-<div class="login">
-  <a routerLink="/user/register" rouerLinkActive="active">register</a>
+<div id="login" class="col-md-8 offset-md-2">
+  <form>
+
+    <div class="form-group row">
+      <label for="inputEmail" class="col-md-2 col-form-label">email</label>
+      <div class="col-md-10">
+        <input type="email" class="form-control" id="inputEmail" placeholder="email">
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label for="inputPassword" class="col-md-2 col-form-label">password</label>
+      <div class="col-md-10">
+        <input type="password" class="form-control" id="inputPassword" placeholder="password">
+        <div class="text-md-right">
+          <span>forgot password?</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <div class="col-md-12">
+        <button type="submit" class="w-100 btn btn-primary">sign in</button>
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <div class="col-md-12 text-md-right">
+          <span class="text-muted">no account?</span>
+          <a routerLink="/user/register" rouerLinkActive="active">register</a>
+      </div>
+    </div>
+
+  </form>
 </div>

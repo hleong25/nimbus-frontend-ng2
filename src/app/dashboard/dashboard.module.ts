@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 
-import { SharedModule } from '../shared/shared.module';
+import { CoreModule } from '../core/core.module';
 
 import { DashboardRoutingModule } from './dashboard-routing.module';
 import { DashboardComponent } from './components/dashboard.component';
@@ -10,7 +10,7 @@ import { SearchBoxModule } from './search-box/search-box.module';
 
 @NgModule({
   imports: [
-    SharedModule,
+    CoreModule,
     DashboardRoutingModule,
     ContentTypeModule,
     SearchBoxModule,

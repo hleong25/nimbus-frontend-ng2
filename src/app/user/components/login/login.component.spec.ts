@@ -5,7 +5,6 @@ import { DebugElement } from '@angular/core';
 import { Router } from '@angular/router';
 
 import { CoreModule } from '../../../core/core.module';
-import { SharedModule } from '../../../shared/shared.module';
 
 import { LoginComponent } from './login.component';
 
@@ -17,7 +16,6 @@ describe('LoginComponent', () => {
     TestBed.configureTestingModule({
       imports: [
         CoreModule,
-        SharedModule,
       ],
       declarations: [
         LoginComponent

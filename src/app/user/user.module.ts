@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 
-import { SharedModule } from '../shared/shared.module';
+import { CoreModule } from '../core/core.module';
 
 import { UserRoutingModule } from './user-routing.module'
 import { UserComponent } from './components/user/user.component';
@@ -12,7 +12,7 @@ import { UserService } from './services/user.service';
 
 @NgModule({
   imports: [
-    SharedModule,
+    CoreModule,
     UserRoutingModule,
   ],
 

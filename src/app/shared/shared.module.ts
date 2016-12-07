@@ -1,19 +1,20 @@
+// empty -- since we're not using any shared items
+
+/*
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
 
 @NgModule({
   imports: [
-    CommonModule,
+    // empty
   ],
-
   declarations: [
-
+    // empty
   ],
-
   exports: [
-    CommonModule,
-    FormsModule,
+  ],
+  providers: [
+    // empty
   ]
 })
 export class SharedModule { }
+*/

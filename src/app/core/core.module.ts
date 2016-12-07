@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 import { UserService } from '../user/index';
 
@@ -8,6 +9,10 @@ import { UserService } from '../user/index';
     CommonModule
   ],
   declarations: [],
+  exports: [
+    CommonModule,
+    FormsModule,
+  ],
   providers: [
     UserService,
   ]

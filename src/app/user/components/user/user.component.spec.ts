@@ -3,6 +3,8 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
+import { CoreModule } from '../../../core/core.module';
+
 import { UserComponent } from './user.component';
 
 describe('UserComponent', () => {
@@ -11,7 +13,14 @@ describe('UserComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ UserComponent ]
+      imports: [
+        CoreModule,
+      ],
+      declarations: [
+        UserComponent,
+      ],
+      providers: [
+      ],
     })
     .compileComponents();
   }));

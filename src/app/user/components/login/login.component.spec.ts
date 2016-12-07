@@ -2,6 +2,10 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
+import { Router } from '@angular/router';
+
+import { CoreModule } from '../../../core/core.module';
+import { SharedModule } from '../../../shared/shared.module';
 
 import { LoginComponent } from './login.component';
 
@@ -11,7 +15,17 @@ describe('LoginComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ LoginComponent ]
+      imports: [
+        CoreModule,
+        SharedModule,
+      ],
+      declarations: [
+        LoginComponent
+      ],
+      providers: [
+        { provide: Router, useClass: class { navigate = jasmine.createSpy("navigate"); } }
+      ]
+
     })
     .compileComponents();
   }));

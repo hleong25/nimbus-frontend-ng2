@@ -8,6 +8,7 @@ import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 
 import { User } from './models/user';
+import { UserService } from './services/user.service';
 
 @NgModule({
   imports: [
@@ -29,6 +30,7 @@ import { User } from './models/user';
 
   providers: [
     User,
+    UserService,
   ]
 })
 export class UserModule { }

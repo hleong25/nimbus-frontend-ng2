@@ -15,13 +15,8 @@ export class UserComponent implements OnInit {
   ngOnInit() {
   }
 
-  isLoggedIn(): boolean {
-    let user = this.userService.getUser();
-    return (user !== null) && (typeof user.userid !== 'undefined')
-  }
-
   getUserName(): string {
-    return this.isLoggedIn() ? this.userService.getUser().name : '';
+    return this.userService.isLoggedIn() ? this.userService.getUser().name : '';
   }
 
 }

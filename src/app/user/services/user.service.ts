@@ -32,6 +32,10 @@ export class UserService {
         })
     }
 
+    isLoggedIn(): boolean {
+        return (this.user !== null) && (typeof this.user.userid !== 'undefined')
+    }
+
     destroy() {
         if (this.user !== null) {
 

@@ -3,9 +3,10 @@ import { async, ComponentFixture, TestBed, inject, tick, fakeAsync } from '@angu
 import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
+import { ContentTypeModule } from '../content-type/content-type.module';
+import { SearchBoxModule } from '../search-box/search-box.module';
+
 import { DashboardComponent } from './dashboard.component';
-import { ContentTypeComponent, ContentTypeService } from '../content-type/content-type.exports';
-import { SearchBoxComponent } from '../search-box/search-box.exports'
 
 describe('DashboardComponent', () => {
   let component: DashboardComponent;
@@ -13,10 +14,12 @@ describe('DashboardComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports: [
+        ContentTypeModule,
+        SearchBoxModule,
+      ],
       declarations: [
         DashboardComponent,
-        ContentTypeComponent,
-        SearchBoxComponent,
       ]
     })
     .compileComponents();

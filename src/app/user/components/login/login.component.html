@@ -14,7 +14,7 @@
       <div class="col-md-10">
         <input type="password" class="form-control" id="inputPassword" placeholder="password"
           name="password" [(ngModel)]="loginInfo.password" #password="ngModel" required >
-        <div class="text-md-right">
+        <div class="text-md-right hint">
           <span>forgot password?</span>
         </div>
       </div>
@@ -27,7 +27,7 @@
     </div>
 
     <div class="form-group row">
-      <div class="col-md-12 text-md-right">
+      <div class="col-md-12 text-md-right hint">
           <span class="text-muted">no account?</span>
           <a routerLink="/user/register" rouerLinkActive="active">register</a>
       </div>

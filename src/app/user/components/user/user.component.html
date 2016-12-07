@@ -1,3 +1,8 @@
 <div class="user">
-    <a routerLink="/user/login" rouerLinkActive="active">sign in</a>
+    <div *ngIf="!isLoggedIn()"  class="login">
+        <a routerLink="/user/login" rouerLinkActive="active">sign in</a>
+    </div>
+    <div *ngIf="isLoggedIn()" class="logoff">
+        <span>Welcome {{getUserName()}}</span>
+    </div>
 </div>

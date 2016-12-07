@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
+import { User } from '../../models/user';
+import { UserService } from '../../services/user.service';
+
 @Component({
   selector: 'user',
   templateUrl: './user.component.html',
@@ -7,9 +10,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserComponent implements OnInit {
 
-  constructor() { }
+  constructor(private userService: UserService) { }
 
   ngOnInit() {
+  }
+
+  isLoggedIn(): boolean {
+    let user = this.userService.getUser();
+    return (user !== null) && (typeof user.userid !== 'undefined')
+  }
+
+  getUserName(): string {
+    return this.isLoggedIn() ? this.userService.getUser().name : '';
   }
 
 }

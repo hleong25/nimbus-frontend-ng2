@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
+// import { User } from '../../models/user';
+import { UserService } from '../../services/user.service';
+
 @Component({
   selector: 'user-login',
   templateUrl: './login.component.html',
@@ -13,7 +16,8 @@ export class LoginComponent implements OnInit {
   errmsg: string;
 
   constructor(
-    private router: Router
+    private router: Router,
+    private userService: UserService,
   ) { }
 
   ngOnInit() {
@@ -21,15 +25,15 @@ export class LoginComponent implements OnInit {
   }
 
   login() {
-    if (this.loginInfo.email.startsWith('demo') && this.loginInfo.password === 'demo') {
-      this.router.navigate(['/home']);
-      return;
-    }
-
-    this.errmsg = 'Login failed. Try again...';
-
+    this.userService
+      .login(this.loginInfo.email, this.loginInfo.password)
+      .then((user) => {
+        console.log('Login successful: ', user)
+        this.router.navigate(['/home']);
+      })
+      .catch((err) => {
+        this.errmsg = err;
+      });
   }
-
-  //get debuginfo() { return JSON.stringify(this.loginInfo, null, ' '); }
 
 }

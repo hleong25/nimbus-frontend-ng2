@@ -2,10 +2,13 @@
 import { async, ComponentFixture, TestBed, inject, tick, fakeAsync } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
+import { Router } from '@angular/router';
 
+import { CoreModule } from '../../../core/core.module';
 import { ContentTypeModule } from '../../shared/content-type/content-type.module';
 import { SearchBoxModule } from '../../shared/search-box/search-box.module';
 
+// import { DashboardRoutingModule } from '../../dashboard-routing.module';
 import { DashboardComponent } from './dashboard.component';
 
 describe('DashboardComponent', () => {
@@ -15,11 +18,15 @@ describe('DashboardComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [
+        CoreModule,
         ContentTypeModule,
         SearchBoxModule,
       ],
       declarations: [
         DashboardComponent,
+      ],
+      providers: [
+        { provide: Router, useClass: class { navigate = jasmine.createSpy("navigate"); } }
       ]
     })
     .compileComponents();

@@ -29,6 +29,7 @@ export class UserService {
         .then((user) =>{
             // set the member var
             this.user = user;
+            return user;
         })
     }
 

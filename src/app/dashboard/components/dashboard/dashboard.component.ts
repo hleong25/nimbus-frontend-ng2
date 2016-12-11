@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+
+import { UserService } from '../../../user/index';
 
 import {
   ContentType,
@@ -15,7 +18,14 @@ export class DashboardComponent implements OnInit {
 
   contentTypes: ContentType[];
 
-  constructor(private contentTypeService: ContentTypeService) {
+  constructor(
+    private router: Router,
+    private userService: UserService,
+    private contentTypeService: ContentTypeService,
+  ) {
+    if (!userService.isLoggedIn()) {
+      this.router.navigate(['/user/login']);
+    }
   }
 
   ngOnInit() {

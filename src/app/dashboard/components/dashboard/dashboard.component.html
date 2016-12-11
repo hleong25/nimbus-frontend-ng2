@@ -1,0 +1,8 @@
+<div id="content-types" class="row">
+    <template ngFor let-contentType [ngForOf]="contentTypes">
+        <div class="col-xs-3 col-md-3 content-type">
+            <content-type [contentType]="contentType" (click)="btninfo($event, contentType)"></content-type>
+        </div>
+    </template>
+</div>
+<search-box></search-box>

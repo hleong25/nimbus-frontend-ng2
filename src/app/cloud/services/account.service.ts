@@ -12,9 +12,9 @@ export interface AuthFunc {
 @Injectable()
 export class AccountService {
 
-  constructor() { }
+  public constructor() { }
 
-  create(
+  public create(
     type: CloudType,
     email: string,
     authFn: AuthFunc

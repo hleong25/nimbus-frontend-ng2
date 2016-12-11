@@ -3,8 +3,8 @@ import { async, ComponentFixture, TestBed, inject, tick, fakeAsync } from '@angu
 import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
-import { ContentTypeModule } from '../content-type/content-type.module';
-import { SearchBoxModule } from '../search-box/search-box.module';
+import { ContentTypeModule } from '../../shared/content-type/content-type.module';
+import { SearchBoxModule } from '../../shared/search-box/search-box.module';
 
 import { DashboardComponent } from './dashboard.component';
 

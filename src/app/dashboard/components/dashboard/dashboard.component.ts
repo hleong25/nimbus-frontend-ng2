@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import {
   ContentType,
   ContentTypeService,
-} from '../content-type/index';
+} from '../../shared/content-type/index';
 
 @Component({
   selector: 'dashboard',
@@ -25,6 +25,10 @@ export class DashboardComponent implements OnInit {
       .then(types => {
         this.contentTypes = types;
       });
+  }
+
+  btninfo(event, contentType) {
+    console.log(event, contentType);
   }
 
 }

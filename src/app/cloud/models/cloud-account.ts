@@ -2,7 +2,7 @@ import { CloudType } from './cloud-type';
 import { File } from './file';
 import { User } from './user';
 
-export class Account {
+export class CloudAccount {
     private _type: CloudType;
     private _user: User;
     private _files: File[];

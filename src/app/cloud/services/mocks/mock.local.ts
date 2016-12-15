@@ -1,15 +1,16 @@
-import { Account } from '../../models/account';
+import { CloudAccount } from '../../models/cloud-account';
 import { CloudType } from '../../models/cloud-type';
 import { User } from '../../models/user';
 import { File } from '../../models/file';
 
-let MOCK_LOCAL_USER: User = new User("user@localhost.com");
-let MOCK_LOCAL_FILES: File[] = [
-    new File("test1"),
-    new File("test2"),
-    new File("test3"),
-    new File("test4"),
-    new File("test5"),
-]
+import { MockGenerator } from './mock.generator';
 
-export const MOCK_LOCAL_ACCOUNT: Account = new Account(CloudType.Local, MOCK_LOCAL_USER, MOCK_LOCAL_FILES);
+let MOCK_USER: User = new User("user@localhost.com");
+
+let MOCK_FILES: File[] = [];
+MOCK_FILES.push(...MockGenerator.genDocuments(5, "/tmp/text", "text"));
+MOCK_FILES.push(...MockGenerator.genVideos(5, "/tmp/video", "movie"));
+MOCK_FILES.push(...MockGenerator.genAudios(5, "/tmp/audio", "music"));
+MOCK_FILES.push(...MockGenerator.genImages(5, "/tmp/image", "pic"));
+
+export const MOCK_LOCAL_ACCOUNT: CloudAccount = new CloudAccount(CloudType.Local, MOCK_USER, MOCK_FILES);

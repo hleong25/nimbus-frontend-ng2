@@ -24,10 +24,6 @@ export class File {
         this._timestamp = timestamp || new Date(0);
     }
 
-    public toString(): string {
-        return "hello";
-    }
-
 	public get name(): string {
 		return this._name;
 	}

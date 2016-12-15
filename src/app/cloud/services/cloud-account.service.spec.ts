@@ -1,18 +1,18 @@
 /* tslint:disable:no-unused-variable */
 
 import { TestBed, async, inject } from '@angular/core/testing';
-import { AccountService } from './account.service';
+import { CloudAccountService } from './cloud-account.service';
 
 import { CloudType } from '../models/cloud-type';
 
 describe('AccountService', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
-      providers: [AccountService]
+      providers: [CloudAccountService]
     });
   });
 
-  it('should ...', inject([AccountService], (service: AccountService) => {
+  it('should ...', inject([CloudAccountService], (service: CloudAccountService) => {
     expect(service).toBeTruthy();
 
     let account = service.create(CloudType.Local, "", function():string {return ""});

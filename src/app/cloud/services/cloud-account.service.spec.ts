@@ -5,7 +5,7 @@ import { CloudAccountService } from './cloud-account.service';
 
 import { CloudType } from '../models/cloud-type';
 
-describe('AccountService', () => {
+describe('CloudAccountService', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       providers: [CloudAccountService]
@@ -16,6 +16,6 @@ describe('AccountService', () => {
     expect(service).toBeTruthy();
 
     let account = service.create(CloudType.Local, "", function():string {return ""});
-    console.log(JSON.stringify(account, null, '  '));
+    // console.log(JSON.stringify(account, null, '  '));
   }));
 });

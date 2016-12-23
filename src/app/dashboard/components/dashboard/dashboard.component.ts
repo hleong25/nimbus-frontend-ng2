@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 import { UserService } from '../../../user/index';
+import { NimbusAccountService } from '../../../cloud/index';
 
 import {
   ContentType,
@@ -22,6 +23,7 @@ export class DashboardComponent implements OnInit {
     private router: Router,
     private userService: UserService,
     private contentTypeService: ContentTypeService,
+    private nimbusService: NimbusAccountService,
   ) {
     if (!userService.isLoggedIn()) {
       this.router.navigate(['/user/login']);
@@ -39,6 +41,8 @@ export class DashboardComponent implements OnInit {
 
   btninfo(event, contentType) {
     console.log(event, contentType);
+
+    console.log(this.nimbusService.filter());
   }
 
 }

@@ -2,17 +2,21 @@ import { Injectable } from '@angular/core';
 
 import { User } from './../models/user';
 
+import { NimbusAccountService } from '../../cloud/index';
+
 @Injectable()
 export class UserService {
     private user: User = null;
 
-    constructor() { }
+    public constructor(
+        private nimbusService: NimbusAccountService,
+    ) { }
 
-    getUser(): User {
+    public getUser(): User {
         return this.user;
     }
 
-    login(email: string, password: string): Promise<User> {
+    public login(email: string, password: string): Promise<User> {
         return new Promise<User>((resolve, reject) => {
             setTimeout(function() {
                 if (email.startsWith('demo') && password === 'demo') {
@@ -33,11 +37,11 @@ export class UserService {
         })
     }
 
-    isLoggedIn(): boolean {
+    public isLoggedIn(): boolean {
         return (this.user !== null) && (typeof this.user.userid !== 'undefined')
     }
 
-    destroy() {
+    public destroy() {
         if (this.user !== null) {
 
         }

@@ -6,7 +6,7 @@ import { UserService } from '../user/index';
 
 @NgModule({
   imports: [
-    CommonModule
+    CommonModule,
   ],
   declarations: [],
   exports: [

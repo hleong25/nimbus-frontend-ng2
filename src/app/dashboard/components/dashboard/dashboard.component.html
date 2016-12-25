@@ -6,3 +6,10 @@
     </template>
 </div>
 <search-box></search-box>
+<div id="files" >
+    <ul>
+    <template ngFor let-cloudFiles [ngForOf]="cloudFiles">
+        <li>{{cloudFiles}}</li>
+    </template>
+    </ul>
+</div>

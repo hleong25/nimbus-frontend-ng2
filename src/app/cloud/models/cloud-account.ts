@@ -1,16 +1,16 @@
 import { CloudType } from './cloud-type';
-import { File } from './file';
+import { CloudFile } from './cloud-file';
 import { User } from './user';
 
 export class CloudAccount {
     private _type: CloudType;
     private _user: User;
-    private _files: File[];
+    private _files: CloudFile[];
 
     public constructor(
         type: CloudType,
         user: User,
-        files?: File[]
+        files?: CloudFile[]
     ) {
         this._type = type;
         this._user = user;
@@ -28,11 +28,11 @@ export class CloudAccount {
         return this._user;
     }
 
-    public get files(): File[] {
+    public get files(): CloudFile[] {
         return this._files;
     }
 
-    public addFiles(...files: File[]): number {
+    public addFiles(...files: CloudFile[]): number {
         // TODO -- look for dups
         let n = files.length;
 

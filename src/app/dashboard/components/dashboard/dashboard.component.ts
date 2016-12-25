@@ -19,6 +19,9 @@ export class DashboardComponent implements OnInit {
 
   contentTypes: ContentType[];
 
+  cloudFiles: string[];
+
+
   constructor(
     private router: Router,
     private userService: UserService,
@@ -37,12 +40,19 @@ export class DashboardComponent implements OnInit {
       .then(types => {
         this.contentTypes = types;
       });
+
+    this.cloudFiles = [];
+
+    this.nimbusService.getAll().subscribe({
+      next: (files) => this.cloudFiles.push(files.path +'/'+ files.name)
+    });
   }
 
   btninfo(event, contentType) {
     console.log(event, contentType);
 
-    console.log(this.nimbusService.filter());
+    this.nimbusService.fetch();
+
   }
 
 }

@@ -1,6 +1,6 @@
 import { ContentType } from './content-type';
 
-export class File {
+export class CloudFile {
     private _name: string;
     private _path: string;
     private _size: number;

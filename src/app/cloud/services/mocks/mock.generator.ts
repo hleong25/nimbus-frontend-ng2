@@ -1,4 +1,4 @@
-import { File } from '../../models/file';
+import { CloudFile } from '../../models/cloud-file';
 import { ContentType } from '../../models/content-type';
 
 class MockFileType {
@@ -14,10 +14,10 @@ export class MockGenerator {
         max: number,
         rootpath: string,
         prefixName: string
-    ): File[] {
+    ): CloudFile[] {
         const MAX_DAYS: number = 30;
 
-        let files: File[] = [];
+        let files: CloudFile[] = [];
 
         let now: Date = new Date(Date.now());
         let startDate: Date = new Date(now.setDate(now.getDate() - MAX_DAYS));
@@ -28,7 +28,7 @@ export class MockGenerator {
             let date: Date = new Date(startDate);
             date.setDate(date.getDate() + (Math.floor(Math.random() * MAX_DAYS)));
 
-            files.push(new File(
+            files.push(new CloudFile(
                 prefixName + idx + mockfiletypes[rnd].ext,
                 rootpath,
                 size,
@@ -41,7 +41,7 @@ export class MockGenerator {
         return files;
     }
 
-    public static genDocuments(max: number, rootpath: string, prefixName: string): File[] {
+    public static genDocuments(max: number, rootpath: string, prefixName: string): CloudFile[] {
         const MOCK_FILE_TYPES: MockFileType[] = [
             { ext: '.doc',  mime: 'application/msword' },
             { ext: '.docx', mime: 'application/vnd.openxmlformats-officedocument.wordprocessingml.document' },
@@ -52,7 +52,7 @@ export class MockGenerator {
         return MockGenerator.generate(ContentType.Document, MOCK_FILE_TYPES, max, rootpath, prefixName);
     }
 
-    public static genVideos(max: number, rootpath: string, prefixName: string): File[] {
+    public static genVideos(max: number, rootpath: string, prefixName: string): CloudFile[] {
         const MOCK_FILE_TYPES: MockFileType[] = [
             { ext: '.m4v',  mime: 'video/x-m4v' },
             { ext: '.qt',  mime: 'video/quicktime' },
@@ -63,7 +63,7 @@ export class MockGenerator {
         return MockGenerator.generate(ContentType.Video, MOCK_FILE_TYPES, max, rootpath, prefixName);
     }
 
-    public static genAudios(max: number, rootpath: string, prefixName: string): File[] {
+    public static genAudios(max: number, rootpath: string, prefixName: string): CloudFile[] {
         const MOCK_FILE_TYPES: MockFileType[] = [
             { ext: '.wav',  mime: 'audio/x-wav' },
             { ext: '.mp3',  mime: 'audio/mp3' },
@@ -73,7 +73,7 @@ export class MockGenerator {
         return MockGenerator.generate(ContentType.Audio, MOCK_FILE_TYPES, max, rootpath, prefixName);
     }
 
-    public static genImages(max: number, rootpath: string, prefixName: string): File[] {
+    public static genImages(max: number, rootpath: string, prefixName: string): CloudFile[] {
         const MOCK_FILE_TYPES: MockFileType[] = [
             { ext: '.jpg',  mime: 'image/jpeg' },
             { ext: '.png',  mime: 'image/png' },

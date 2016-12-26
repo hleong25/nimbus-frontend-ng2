@@ -6,10 +6,10 @@
     </template>
 </div>
 <search-box></search-box>
-<div id="files" >
+<div id="files" class="clearfix">
     <ul>
-    <template ngFor let-cloudFiles [ngForOf]="cloudFiles">
-        <li>{{cloudFiles}}</li>
-    </template>
+        <template ngFor let-cloudFiles [ngForOf]="cloudFiles">
+            <li>{{cloudFiles.path}}/{{cloudFiles.name}}</li>
+        </template>
     </ul>
 </div>

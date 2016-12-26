@@ -2,7 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 import { UserService } from '../../../user/index';
-import { NimbusAccountService } from '../../../cloud/index';
+import {
+  NimbusAccountService,
+  CloudFile,
+} from '../../../cloud/index';
 
 import {
   ContentType,
@@ -17,12 +20,10 @@ import {
 })
 export class DashboardComponent implements OnInit {
 
-  contentTypes: ContentType[];
+  private contentTypes: ContentType[] = [];
+  private cloudFiles: CloudFile[] = [];
 
-  cloudFiles: string[];
-
-
-  constructor(
+  public constructor(
     private router: Router,
     private userService: UserService,
     private contentTypeService: ContentTypeService,
@@ -33,7 +34,7 @@ export class DashboardComponent implements OnInit {
     }
   }
 
-  ngOnInit() {
+  public ngOnInit() {
     this
       .contentTypeService
       .getContentTypes()
@@ -43,15 +44,20 @@ export class DashboardComponent implements OnInit {
 
     this.cloudFiles = [];
 
-    this.nimbusService.getAll().subscribe({
-      next: (files) => this.cloudFiles.push(files.path +'/'+ files.name)
-    });
+    this.nimbusService
+      .getFiles()
+      .subscribe({
+        next: (files) => this.cloudFiles.push(files)
+      });
   }
 
-  btninfo(event, contentType) {
+  public btninfo(event: Event, contentType: ContentType) {
     console.log(event, contentType);
+    console.log(this.nimbusService.getFiles())
 
-    this.nimbusService.fetch();
+    this.cloudFiles = [];
+
+    this.nimbusService.filter(contentType);
 
   }
 

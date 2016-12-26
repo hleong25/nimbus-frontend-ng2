@@ -31,7 +31,9 @@ export class NimbusAccountService {
   }
 
   public getAll() : Observable<CloudFile> {
-    return this.allFiles.asObservable();
+    return this.allFiles
+      .asObservable()
+      .distinct();
   }
 
   public fetch() {
